@@ -20,6 +20,8 @@ $( document ).ready(function() {
   var opc6 = false;
   var labelC;
 
+  socket.emit('pr', {pr: "Cultural"});
+
   socket.emit('catQ', {catQ: text});
 
   socket.on('catR', function(catRm) {
@@ -87,7 +89,6 @@ $( document ).ready(function() {
     {
       $("#dropUl").append("<li><a>Tec GDL</a></li>");
       $("#dropUl").append("<li><a>Tec Monterrey</a></li>");
-      $("#dropUl").append("<li><a>Tec Leon</a></li>");
     }
     else if(trigger == 'trigger3')
     {
@@ -132,6 +133,7 @@ $( document ).ready(function() {
         opcion5 = "Art";
         opcion6 = "Literary Editor";
         socket.emit('catQ', {catQ: text});
+        socket.emit('pr', {pr: "Cultural"});
       }
       else if(text == "Sport")
       {
@@ -144,6 +146,7 @@ $( document ).ready(function() {
         opcion5 = "Sports League";
         opcion6 = "Sport";
         socket.emit('depQ', {depQ: "Deportes"});
+        socket.emit('pr', {pr: "Deportes"});
       }
       else if(text == "Interest")
       {
@@ -156,6 +159,7 @@ $( document ).ready(function() {
         opcion5 = "Company";
         opcion6 = "Book";
         socket.emit('intQ', {intQ: "Interes"});
+        socket.emit('pr', {pr: "Interes"});
       }
       else if(text == "Entertainment")
       {
@@ -168,6 +172,7 @@ $( document ).ready(function() {
         opcion5 = "Festival";
         opcion6 = "Bar";
         socket.emit('entQ', {entQ: "Entretenimiento"});
+        socket.emit('pr', {pr: "Entretenimiento"});
       }
 
       if(trigger == "trigger1")
@@ -177,6 +182,7 @@ $( document ).ready(function() {
       else if(trigger == "trigger2")
       {
         escuela = text;
+        socket.emit('escuela', {esc: escuela});
       }
       else if(trigger == "trigger3")
       {
