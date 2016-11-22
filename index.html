@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Recommendation</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="materialize/css/materialize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="container">
+    <div id="fader"></div>
+
+    <div id="message">
+      I want a(n) <div class="border" class="trigger" id="trigger1"><a class='dropdown-b'>Cultural</a></div> event for the
+      <div class="border" class="trigger" id="trigger2"><a class='dropdown-b'>Tec GDA</a></div>
+      <div class="comma">,</div>
+      which I would like to focus on
+      <div class="border" class="trigger" id="trigger3"><a class='dropdown-b' id="tag3">Artist</a></div>
+      <div id="comma4" class="comma">,</div>
+      <div class="border" class="trigger" id="trigger4"><a class='dropdown-b' id="tag4">Performance Art</a></div>
+      <div id="comma5" class="comma">,</div>
+      <div class="border" class="trigger" id="trigger5"><a class='dropdown-b' id="tag5">Art</a></div>
+      <div id="comma6" class="comma">,</div>
+      <div class="border" class="trigger" id="trigger6"><a class='dropdown-b' id="tag6">Literary Editor</a></div>
+      and that's all.
+    </div>
+
+    <div id="plus" class="fixed-action-btn vertical click-to-toggle">
+      <a id="menu" class="btn-floating btn-large red waves-effect waves-light">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul>
+        <li><a id="calculate" class="btn-floating blue"><i class="material-icons">thumb_up</i></a></li>
+        <li><a id="add" class="btn-floating green darken-1"><i class="material-icons">add</i></a></li>
+        <li><a id="erase" class="btn-floating orange"><i class="material-icons">clear_all</i></a></li>
+      </ul>
+    </div>
+
+    <div class='animated dropdown-c'>
+      <ul id="dropUl">
+        <li>
+          <a>Cultural</a>
+        </li>
+        <li>
+          <a>Sport</a>
+        </li>
+        <li>
+          <a>Interest</a>
+        </li>
+        <li>
+          <a>Entertainmet</a>
+        </li>
+      </ul>
+    </div>
+
+    <a id="openM" class="animated bounce infinite btn-floating waves-effect waves-light btn-large modal-trigger" data-target="modal1"><i class="large material-icons" id="search">search</i></a>
+  </div>
+
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Top 3 recommendations</h4>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <p class="title">Title</p>
+          <br>
+          <p id="comida1">First Line</p>
+          <br>
+          <p id="musica1">First Line</p>
+          <br>
+          <p id="lugar1">First Line</p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <p class="title">Title</p>
+          <br>
+          <p id="comida2">First Line</p>
+          <br>
+          <p id="musica2">First Line</p>
+          <br>
+          <p id="lugar2">First Line</p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <p class="title">Title</p>
+          <br>
+          <p id="comida3">First Line</p>
+          <br>
+          <p id="musica3">First Line</p>
+          <br>
+          <p id="lugar3">First Line</p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+  <script src="js/socket.io.js"></script>
+  <script src="js/app.js"></script>
+  </body>
+</html>
